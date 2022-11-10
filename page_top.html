@@ -11,15 +11,45 @@
     .top {
       border:1px solid #f5f5f5;
     }
-    .top > .area {
-      background-color: orange;
+    .top .area {
+      display: flex;
+      justify-content: space-between;
+      /* align-items: normal; */
       height:41px;
+      line-height: 41px; /*会继承到下面*/
     }
+    .top .left-area {
+      display: flex;
+    }
+    .top .left-area .logo a{
+      /* a 标签换成 块级*/
+      display:block;
+      width:150px;
+      text-indent: -9999px;/*隐藏 文字*/
+      background: url(./img/top-logo.png) no-repeat center center;
+    }
+    .top .left-area .recommend {
+      /* width:230px;
+      text-indent:-9999px; */
+    }
+    .top .right-area {
+      background-color: yellow;
+    }
+
   </style>
-</head>
+</head> 
 <body>
   <div class="top">
-    <div class="top-wrapper area">
+    <div class="top_wrapper area">
+      <div class="left-area">
+        <div class="logo">
+          <a href="#">腾讯游戏</a>
+        </div>
+        <div class="recommend">
+          <img src="./img/top-recommend.jpg" alt="">
+        </div>
+      </div>
+      <div class="right-area">right</div>
     </div>
   </div>
 </body>
